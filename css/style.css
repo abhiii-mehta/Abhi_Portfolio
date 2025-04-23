@@ -56,3 +56,41 @@ body {
     border-color: red;
     color: red;
 }
+
+.hallway-bg {
+    background: url('../images/hallway-background.png') no-repeat center center;
+    background-size: cover;
+    height: 800px;
+    position: relative;
+  }
+  
+  .door-overlay {
+    position: absolute;
+    width: 7%;
+    height: 20%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+  }
+  
+  .door-overlay:hover {
+    border-color: #00fff7;
+    box-shadow: 0 0 8px #00fff7;
+  }
+  
+  .door-overlay::after {
+    content: attr(data-label);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8em;
+    color: #00fff7;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .door-overlay:hover::after {
+    opacity: 1;
+  }
+  
