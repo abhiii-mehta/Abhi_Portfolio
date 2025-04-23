@@ -1,0 +1,54 @@
+
+body {
+    margin: 0;
+    font-family: 'Courier New', monospace;
+    background: black;
+    color: #00fff7;
+}
+
+.landing {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(#0f0f0f, black);
+    text-align: center;
+}
+
+.scroll-down {
+    margin-top: 2em;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+.hallway {
+    padding: 5em 2em;
+    background: #111;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2em;
+}
+
+.door {
+    padding: 2em;
+    background: #222;
+    border: 2px solid #00fff7;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.door:hover {
+    background: #00fff7;
+    color: black;
+}
+
+.locked {
+    border-color: red;
+    color: red;
+}
